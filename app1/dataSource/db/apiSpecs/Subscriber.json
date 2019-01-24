@@ -1,0 +1,452 @@
+[
+  {
+    "serviceUrl" : "/ds/delete/app1/db/Subscriber",
+    "method" : "delete",
+    "querySchema" : {
+      "properties" : {
+        "permanent" : {
+          "required" : true,
+          "type" : "string"
+        },
+        "id" : {
+          "required" : true,
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    }
+  },
+  {
+    "serviceUrl" : "/ds/deleteAll/app1/db/Subscriber",
+    "bodySchema" : {
+      "array" : true,
+      "type" : "string"
+    },
+    "method" : "delete",
+    "querySchema" : {
+      "properties" : {
+        "permanent" : {
+          "required" : true,
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    }
+  },
+  {
+    "serviceUrl" : "/ds/deleteByQuery/app1/db/Subscriber",
+    "method" : "delete",
+    "querySchema" : {
+      "properties" : {
+        "permanent" : {
+          "required" : true,
+          "type" : "string"
+        },
+        "query" : {
+          "required" : true,
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    }
+  },
+  {
+    "serviceUrl" : "/ds/object/app1/db/Subscriber",
+    "method" : "get",
+    "outputSchema" : {
+      "properties" : {
+        "country" : {
+          "type" : "string"
+        },
+        "usageStatus" : {
+          "type" : "string"
+        },
+        "lastLogin" : {
+          "type" : "string"
+        },
+        "usage" : {
+          "type" : "string"
+        },
+        "satisfaction" : {
+          "type" : "string"
+        },
+        "createdAt" : {
+          "type" : "number"
+        },
+        "usageDuration" : {
+          "type" : "string"
+        },
+        "countryFlag" : {
+          "type" : "string"
+        },
+        "headshot" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "paymentMethod" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "number"
+        },
+        "overallStatus" : {
+          "type" : "string"
+        },
+        "updatedAt" : {
+          "type" : "number"
+        },
+        "status" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "querySchema" : {
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "testQuery" : {
+      "id" : "1"
+    }
+  },
+  {
+    "serviceUrl" : "/ds/objects/app1/db/Subscriber",
+    "bodySchema" : {
+      "array" : true,
+      "type" : "string"
+    },
+    "method" : "post"
+  },
+  {
+    "serviceUrl" : "/ds/objectsbyquery/app1/db/Subscriber",
+    "method" : "get",
+    "querySchema" : {
+      "properties" : {
+        "query" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    }
+  },
+  {
+    "serviceUrl" : "/ds/page/app1/db/Subscriber",
+    "bodySchema" : {
+      "properties" : {
+        "having" : {
+          "type" : "string"
+        },
+        "size" : {
+          "type" : "integer"
+        },
+        "start" : {
+          "type" : "integer"
+        },
+        "orderBy" : {
+          "type" : "string"
+        },
+        "where" : {
+          "type" : "string"
+        },
+        "groupBy" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "method" : "post",
+    "outputSchema" : {
+      "properties" : {
+        "items" : {
+          "array" : true,
+          "properties" : {
+            "country" : {
+              "type" : "string"
+            },
+            "usageStatus" : {
+              "type" : "string"
+            },
+            "lastLogin" : {
+              "type" : "string"
+            },
+            "usage" : {
+              "type" : "string"
+            },
+            "satisfaction" : {
+              "type" : "string"
+            },
+            "createdAt" : {
+              "type" : "number"
+            },
+            "usageDuration" : {
+              "type" : "string"
+            },
+            "countryFlag" : {
+              "type" : "string"
+            },
+            "headshot" : {
+              "type" : "string"
+            },
+            "name" : {
+              "type" : "string"
+            },
+            "paymentMethod" : {
+              "type" : "string"
+            },
+            "id" : {
+              "type" : "number"
+            },
+            "overallStatus" : {
+              "type" : "string"
+            },
+            "updatedAt" : {
+              "type" : "number"
+            },
+            "status" : {
+              "type" : "string"
+            }
+          },
+          "type" : "object"
+        },
+        "totalItems" : {
+          "type" : "number"
+        },
+        "start" : {
+          "type" : "number"
+        },
+        "_paginated_" : {
+          "type" : "boolean"
+        }
+      },
+      "type" : "object"
+    },
+    "testBody" : {
+      "size" : 1,
+      "start" : 1
+    }
+  },
+  {
+    "serviceUrl" : "/ds/save/app1/db/Subscriber",
+    "bodySchema" : {
+      "properties" : {
+        "country" : {
+          "type" : "string"
+        },
+        "usageStatus" : {
+          "type" : "string"
+        },
+        "lastLogin" : {
+          "type" : "string"
+        },
+        "usageDuration" : {
+          "type" : "string"
+        },
+        "countryFlag" : {
+          "type" : "string"
+        },
+        "headshot" : {
+          "type" : "string"
+        },
+        "usage" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "paymentMethod" : {
+          "type" : "string"
+        },
+        "satisfaction" : {
+          "type" : "string"
+        },
+        "overallStatus" : {
+          "type" : "string"
+        },
+        "status" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "method" : "post",
+    "outputSchema" : {
+      "properties" : {
+        "country" : {
+          "type" : "string"
+        },
+        "usageStatus" : {
+          "type" : "string"
+        },
+        "lastLogin" : {
+          "type" : "string"
+        },
+        "usageDuration" : {
+          "type" : "string"
+        },
+        "countryFlag" : {
+          "type" : "string"
+        },
+        "headshot" : {
+          "type" : "string"
+        },
+        "usage" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "paymentMethod" : {
+          "type" : "string"
+        },
+        "satisfaction" : {
+          "type" : "string"
+        },
+        "overallStatus" : {
+          "type" : "string"
+        },
+        "status" : {
+          "type" : "string"
+        },
+        "createdAt" : {
+          "type" : "number"
+        },
+        "updatedAt" : {
+          "type" : "number"
+        },
+        "id" : {
+          "type" : "number"
+        }
+      },
+      "type" : "object"
+    },
+    "testBody" : {
+      "country" : "US",
+      "usageStatus" : "none",
+      "lastLogin" : "time",
+      "usageDuration" : "10",
+      "countryFlag" : "12",
+      "headshot" : "none",
+      "usage" : "1",
+      "name" : "test",
+      "paymentMethod" : "visa",
+      "satisfaction" : "high",
+      "overallStatus" : "great",
+      "status" : "success"
+    }
+  },
+  {
+    "serviceUrl" : "/ds/saveAll/app1/db/Subscriber",
+    "bodySchema" : {
+      "array" : true,
+      "properties" : {
+        "country" : {
+          "type" : "string"
+        },
+        "usageStatus" : {
+          "type" : "string"
+        },
+        "lastLogin" : {
+          "type" : "string"
+        },
+        "usageDuration" : {
+          "type" : "string"
+        },
+        "countryFlag" : {
+          "type" : "string"
+        },
+        "headshot" : {
+          "type" : "string"
+        },
+        "usage" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "paymentMethod" : {
+          "type" : "string"
+        },
+        "satisfaction" : {
+          "type" : "string"
+        },
+        "overallStatus" : {
+          "type" : "string"
+        },
+        "status" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "method" : "post"
+  },
+  {
+    "serviceUrl" : "/ds/update/app1/db/Subscriber",
+    "bodySchema" : {
+      "properties" : {
+        "country" : {
+          "type" : "string"
+        },
+        "usageStatus" : {
+          "type" : "string"
+        },
+        "lastLogin" : {
+          "type" : "string"
+        },
+        "usageDuration" : {
+          "type" : "string"
+        },
+        "countryFlag" : {
+          "type" : "string"
+        },
+        "headshot" : {
+          "type" : "string"
+        },
+        "usage" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "paymentMethod" : {
+          "type" : "string"
+        },
+        "satisfaction" : {
+          "type" : "string"
+        },
+        "overallStatus" : {
+          "type" : "string"
+        },
+        "status" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "method" : "post"
+  },
+  {
+    "serviceUrl" : "/ds/sqltemplate/app1/db/Subscriber",
+    "bodySchema" : {
+      "properties" : {
+        "sqlTemplate" : {
+          "type" : "string"
+        },
+        "size" : {
+          "type" : "integer"
+        },
+        "start" : {
+          "type" : "integer"
+        }
+      },
+      "type" : "object"
+    },
+    "method" : "post"
+  }
+]

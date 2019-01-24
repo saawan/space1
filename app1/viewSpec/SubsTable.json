@@ -1,0 +1,13 @@
+{
+  "name" : "SubsTable",
+  "type" : "dataTable",
+  "apiSpec" : {
+    "serviceUrl" : "/ds/page/app1/db/Subscriber",
+    "body" : {
+      "size" : 1,
+      "start" : 1
+    },
+    "method" : "post"
+  },
+  "cssClass" : "trillo-table"
+}

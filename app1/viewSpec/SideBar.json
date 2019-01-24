@@ -1,0 +1,45 @@
+{
+  "name" : "SideBar",
+  "type" : "html",
+  "width" : "250px",
+  "minWidth" : "250px",
+  "actionSpecs" : [
+    {
+      "name" : "home_",
+      "type" : "view"
+    },
+    {
+      "name" : "sales",
+      "type" : "view"
+    },
+    {
+      "name" : "subscribers",
+      "activityType" : "ds",
+      "apiSpec" : {
+        "serviceUrl" : "/ds/page/app1/db/Subscriber",
+        "method" : "post"
+      },
+      "type" : "api"
+    },
+    {
+      "name" : "about",
+      "type" : "script"
+    },
+    {
+      "name" : "revenue",
+      "type" : "notYet"
+    },
+    {
+      "name" : "alerts",
+      "type" : "notYet"
+    },
+    {
+      "name" : "logs",
+      "type" : "notYet"
+    },
+    {
+      "name" : "calendar",
+      "type" : "notYet"
+    }
+  ]
+}

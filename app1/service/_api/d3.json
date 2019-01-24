@@ -1,0 +1,137 @@
+{
+  "basePath" : "/api",
+  "paths" : {
+    "/companies" : {
+      "post" : {
+        "description" : "TODO: Add Description",
+        "summary" : "searchCompanies",
+        "tags" : [
+          "Misc"
+        ],
+        "operationId" : "CompaniesPost",
+        "produces" : [
+          "application/json"
+        ],
+        "parameters" : [
+          {
+            "name" : "Body",
+            "in" : "body",
+            "required" : true,
+            "description" : "",
+            "schema" : {
+              "$ref" : "#/definitions/searchCompaniesRequest"
+            }
+          }
+        ],
+        "responses" : {
+          "200" : {
+            "description" : ""
+          }
+        },
+        "security" : [
+          {
+            "auth" : [ ]
+          }
+        ]
+      }
+    },
+    "/overview" : {
+      "get" : {
+        "description" : "TODO: Add Description",
+        "summary" : "bizDetails",
+        "tags" : [
+          "Misc"
+        ],
+        "operationId" : "OverviewGet",
+        "produces" : [
+          "application/json"
+        ],
+        "parameters" : [
+          {
+            "name" : "company_id",
+            "in" : "query",
+            "required" : true,
+            "type" : "string",
+            "description" : ""
+          },
+          {
+            "name" : "views",
+            "in" : "query",
+            "required" : true,
+            "type" : "string",
+            "description" : ""
+          }
+        ],
+        "responses" : {
+          "200" : {
+            "description" : ""
+          }
+        },
+        "security" : [
+          {
+            "auth" : [ ]
+          }
+        ]
+      }
+    }
+  },
+  "host" : "uat13.datacubes.io",
+  "produces" : [
+    "application/json"
+  ],
+  "schemes" : [
+    "https"
+  ],
+  "securityDefinitions" : {
+    "auth" : {
+      "type" : "oauth2",
+      "flow" : "implicit",
+      "authorizationUrl" : "https://uat13.datacubes.io/api",
+      "scopes" : { }
+    }
+  },
+  "definitions" : {
+    "searchCompaniesRequest" : {
+      "title" : "searchCompaniesRequest",
+      "example" : {
+        "companyName" : "Firehouse No. 37",
+        "zip" : 94583,
+        "street_addr1" : "250 MARKET PL"
+      },
+      "type" : "object",
+      "properties" : {
+        "companyName" : {
+          "type" : "string"
+        },
+        "zip" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "street_addr1" : {
+          "type" : "string"
+        }
+      },
+      "required" : [
+        "companyName",
+        "zip",
+        "street_addr1"
+      ]
+    }
+  },
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "datacube",
+    "description" : "TODO: Add Description",
+    "contact" : { }
+  },
+  "consumes" : [
+    "application/json"
+  ],
+  "tags" : [
+    {
+      "name" : "Misc",
+      "description" : ""
+    }
+  ]
+}

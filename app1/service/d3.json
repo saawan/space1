@@ -1,0 +1,28 @@
+{
+  "authBodyTemplate" : "grant_type=password&username={username}&password={password}",
+  "docUrl" : "/_model/api-service/app1/d3",
+  "name" : "d3",
+  "props" : {
+    "grant_type" : "password",
+    "oauthUrl" : "https://uat13.datacubes.io/auth/realms/datacubes/protocol/openid-connect/token",
+    "client_id" : "d3-api",
+    "client_secret" : "11c594eb-f588-4018-b4c-57cfcfd2dc55",
+    "username" : "employers@datacubes.io",
+    "password" : "61e610318a90929f"
+  },
+  "routeSpecs" : [
+    {
+      "location" : "https://uat13.datacubes.io",
+      "path" : "/svc/app1/d3/api/companies",
+      "secure" : true
+    },
+    {
+      "location" : "https://uat13.datacubes.io",
+      "path" : "/svc/app1/d3/api/overview",
+      "secure" : true
+    }
+  ],
+  "type" : "externalService",
+  "useHttps" : true,
+  "useOAuth" : true
+}

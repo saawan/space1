@@ -1,0 +1,51 @@
+[
+  {
+    "serviceUrl" : "/svc/app1/d3/api/overview",
+    "method" : "get",
+    "querySchema" : {
+      "properties" : {
+        "company_id" : {
+          "required" : true,
+          "type" : "string"
+        },
+        "views" : {
+          "required" : true,
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    }
+  },
+  {
+    "serviceUrl" : "/svc/app1/d3/api/companies",
+    "bodySchema" : {
+      "properties" : {
+        "zip" : {
+          "type" : "integer"
+        },
+        "companyName" : {
+          "type" : "string"
+        },
+        "street_addr1" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "method" : "post",
+    "outputSchema" : {
+      "properties" : {
+        "companies" : {
+          "array" : true,
+          "type" : "object"
+        }
+      },
+      "type" : "object"
+    },
+    "testBody" : {
+      "zip" : 94583,
+      "companyName" : "Firehouse No. 37",
+      "street_addr1" : "250 MARKET PL"
+    }
+  }
+]
